@@ -1,0 +1,17 @@
+{{define "toast"}} {{if eq .Type "success"}}
+<div
+  hx-swap-oob="outerHTML:#toast"
+  id="toast"
+  class="fixed rounded-md p-4 text-sm right-4 bottom-4 bg-zinc-50 border border-green-400 shadow-md animate select-none"
+>
+  <span class="font-medium">{{.Task.Name}}</span> has been completed!.
+</div>
+{{else}}
+<div
+  hx-swap-oob="outerHTML:#toast"
+  id="toast"
+  class="fixed rounded-md p-4 text-sm right-4 bottom-4 bg-zinc-50 border shadow-md animate select-none"
+>
+  <span class="font-medium">{{.Task.Name}}</span> has been deleted.
+</div>
+{{end}} {{end}}
